@@ -1,0 +1,115 @@
+.about {
+  background: #f9f9f9;
+  padding: 80px 5%;
+}
+
+.header {
+  margin-bottom: 50px;
+}
+
+.tag {
+  display: inline-block;
+  color: #CC0000;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.header h2 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.text > p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.point {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.pointIcon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  background: #fff0f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.point h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.point p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.visual {
+  background: #1a1a1a;
+  border-radius: 12px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shaft {
+  width: 80px;
+  height: 220px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 6px;
+}
+
+.car {
+  width: 62px;
+  height: 52px;
+  background: #CC0000;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  animation: elevatorMove 3s ease-in-out infinite alternate;
+}
+
+@keyframes elevatorMove {
+  from { transform: translateY(0); }
+  to { transform: translateY(-160px); }
+}
