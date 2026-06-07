@@ -19,13 +19,13 @@ const Footer = () => {
       </div>
 
       <div className={styles.contact}>
-        <h4>Contacto</h4>
-        <ul>
-          <li>+54 11 4000-0000</li>
-          <li>info@ascensoresverticalglobal.com</li>
-          <li>ascensoresverticalglobal.com</li>
-        </ul>
-      </div>
+  <h4>Contacto</h4>
+  <ul>
+    <li>+54 9 11 3698-4929</li>
+    <li>info@ascensoresverticalglobal.com</li>
+    <li>ascensoresverticalglobal.com</li>
+  </ul>
+</div>
 
       <div className={styles.bottom}>
         <p>© 2026 Vertical Global. Todos los derechos reservados.</p>

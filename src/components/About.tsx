@@ -8,15 +8,16 @@ const About = () => {
     <section className={styles.about} id="nosotros" ref={ref}>
       <div className={`fade-up ${inView ? 'visible' : ''}`}>
         <span className={styles.tag}>Sobre nosotros</span>
-        <h2>Líderes en el rubro desde hace décadas</h2>
+        <h2>Líderes en mantenimiento de ascensores</h2>
       </div>
 
       <div className={styles.grid}>
         <div className={`fade-left ${inView ? 'visible' : ''} delay-2`}>
           <p>
-            En <strong>Vertical Global</strong> nos especializamos en brindar soluciones
-            integrales de elevación vertical. Trabajamos con las mejores marcas del mercado
-            y contamos con un equipo técnico altamente capacitado.
+            En <strong>Vertical Global</strong> somos especialistas en el mantenimiento
+            y servicio técnico de ascensores. Brindamos soluciones integrales para
+            edificios residenciales y comerciales de Buenos Aires y GBA, garantizando
+            seguridad, disponibilidad y cumplimiento normativo.
           </p>
           <div className={styles.points}>
             <div className={styles.point}>
