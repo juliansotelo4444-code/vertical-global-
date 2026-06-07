@@ -1,4 +1,5 @@
 import styles from './Services.module.css'
+import useInView from '../hooks/useInView'
 
 const services = [
   {
@@ -34,17 +35,25 @@ const services = [
 ]
 
 const Services = () => {
+  const { ref, inView } = useInView()
+
   return (
-    <section className={styles.services} id="servicios">
-      <div className={styles.header}>
-        <span className={styles.tag}>Servicios</span>
-        <h2>Todo lo que necesitás en un solo lugar</h2>
-        <p>Desde la instalación hasta el mantenimiento preventivo, ofrecemos soluciones completas para cualquier tipo de edificio.</p>
+    <section className={styles.services} id="servicios" ref={ref}>
+      <div className={`fade-up ${inView ? 'visible' : ''}`}>
+        <div className={styles.header}>
+          <span className={styles.tag}>Servicios</span>
+          <h2>Todo lo que necesitás en un solo lugar</h2>
+          <p>Desde la instalación hasta el mantenimiento preventivo, ofrecemos soluciones completas para cualquier tipo de edificio.</p>
+        </div>
       </div>
 
       <div className={styles.grid}>
-        {services.map((service) => (
-          <div className={styles.card} key={service.title}>
+        {services.map((service, i) => (
+          <div
+            className={`${styles.card} fade-up ${inView ? 'visible' : ''}`}
+            style={{ transitionDelay: `${i * 0.12}s` }}
+            key={service.title}
+          >
             <div className={styles.icon}>{service.icon}</div>
             <h3>{service.title}</h3>
             <p>{service.description}</p>

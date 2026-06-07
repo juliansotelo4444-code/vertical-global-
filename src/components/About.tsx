@@ -1,15 +1,18 @@
 import styles from './About.module.css'
+import useInView from '../hooks/useInView'
 
 const About = () => {
+  const { ref, inView } = useInView()
+
   return (
-    <section className={styles.about} id="nosotros">
-      <div className={styles.header}>
+    <section className={styles.about} id="nosotros" ref={ref}>
+      <div className={`fade-up ${inView ? 'visible' : ''}`}>
         <span className={styles.tag}>Sobre nosotros</span>
         <h2>Líderes en el rubro desde hace décadas</h2>
       </div>
 
       <div className={styles.grid}>
-        <div className={styles.text}>
+        <div className={`fade-left ${inView ? 'visible' : ''} delay-2`}>
           <p>
             En <strong>Vertical Global</strong> nos especializamos en brindar soluciones
             integrales de elevación vertical. Trabajamos con las mejores marcas del mercado
@@ -40,9 +43,11 @@ const About = () => {
           </div>
         </div>
 
-        <div className={styles.visual}>
-          <div className={styles.shaft}>
-            <div className={styles.car}>▲</div>
+        <div className={`fade-right ${inView ? 'visible' : ''} delay-3`}>
+          <div className={styles.visual}>
+            <div className={styles.shaft}>
+              <div className={styles.car}>▲</div>
+            </div>
           </div>
         </div>
       </div>
