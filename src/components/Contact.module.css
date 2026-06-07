@@ -140,3 +140,18 @@
 .submit:hover {
   background: #aa0000;
 }
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .header h2 {
+    font-size: 26px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

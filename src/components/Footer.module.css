@@ -68,3 +68,15 @@
   color: #444;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-bottom: 20px;
+  }
+
+  .bottom {
+    grid-column: 1;
+  }
+}
