@@ -1,4 +1,5 @@
 import styles from './Navbar.module.css'
+import logo from '../assets/Logo.svg'
 
 const Navbar = () => {
 const scrollTo = (id: string) => {
@@ -7,7 +8,7 @@ const scrollTo = (id: string) => {
 
 return (
     <nav className={styles.nav}>
-    <img src="/logo.png" alt="Vertical Global" className={styles.logo} />
+    <img src={logo} alt="Vertical Global" className={styles.logo} />
 
     <ul className={styles.links}>
         <li><button onClick={() => scrollTo('inicio')}>Inicio</button></li>
